@@ -1,8 +1,9 @@
 package Main;
 import java.util.Stack;
 
-public abstract Calculatrice {
+public class Calculatrice {
 	
+	/*
 	public Stack push (Element element) {
 		return new Stack (pile.push(element));
 	}
@@ -22,17 +23,36 @@ public abstract Calculatrice {
 	public Stack clear (Element element) {
 		return new Stack (pile.clear(element));
 	}
-	
-	
-	
-	public abstract void add() {
-		pop()
-		
+	*/
+	public Double opposite(Double element ) {
+		return element*(-1);
 	}
 	
+	
+	public void add(Stack<Double> pile) {
+		double resultat;
+		resultat = pile.pop() + pile.pop();
+		pile.push(resultat);
+	}
+	
+	public void substract(Stack <Double>pile ) {
+		double resultat;
+		resultat = pile.pop() - pile.pop();
+		pile.push(opposite(resultat));
+	}
+	
+	public void multiply(Stack <Double> pile) {
+		double resultat;
+		resultat = pile.pop() * pile.pop();
+		pile.push(resultat);
+	}
+	
+	public void divide(Stack<Double> pile) {
+		double a = pile.pop();
+		double b = pile.pop();
+		pile.push(b/a);
+	}
+	
+
 }
-
-
-
-//
 
