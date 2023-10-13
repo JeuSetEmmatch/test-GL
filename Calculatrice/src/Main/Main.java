@@ -1,9 +1,10 @@
 package Main;
-
+import java.util.Stack;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(Double[] args) {
 		
+		Stack<Double> pile = new Stack<>();
 	}
-	// mettre la pile dans le main
+	
 }
