@@ -13,22 +13,22 @@ public class Calculatrice {
 		
 		
 	}
-	public Float ajouter (Float nb1,Float nb2) {	
+	public Float add (Float nb1,Float nb2) {	
 		resultat =  nb1 + nb2;
 		return  resultat;
 	}
 	
-	public Float soustraire (Float nb1, Float nb2 ) {
+	public Float substract (Float nb1, Float nb2 ) {
 		resultat = nb1 - nb2;
 		return resultat;
 	}
 	
-	public Float multiplier (Float nb1, Float nb2 ) {
+	public Float multiply (Float nb1, Float nb2 ) {
 		resultat =  nb1*nb2;
 		return resultat;
 	}
 	
-	public Float diviser (Float nb1, Float nb2 ) {
+	public Float divide (Float nb1, Float nb2 ) {
 		resultat = nb1/nb2;
 		return resultat;
 	}
