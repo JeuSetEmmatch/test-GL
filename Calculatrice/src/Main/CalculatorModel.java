@@ -9,34 +9,9 @@ public class CalculatorModel implements CalculatorModelInterface {
 		accu=0;
 		pile= new Stack<Double>();
 	}
-	/*
-	public Stack push (Element element) {
-		return Stack (pile.push(element));
-	}
+
 	
-	public Stack pop (Element element) {
-		return new Stack (pile.pop(element));
-	}
 	
-	public Stack drop (Element element) {
-		return new Stack (pile.drop(element));
-	}
-	
-	public Stack swap (Element element) {
-		return new Stack (pile.swap(element));
-	}
-	
-	public Stack clear (Element element) {
-		return new Stack (pile.clear(element));
-	}
-	
-	verifier qu'on peut faire un pop
-	en la mettant dans le code et faisant tourner une boucle
-	
-	creer pile et accu
-	*/
-	
-	// teste si la pile contient suffisamment d'elements pour réaliser une opération
 	public Boolean test (Stack<Double> pile) {
 		if (pile.size()>=2) 
 			{return true;}
@@ -44,7 +19,7 @@ public class CalculatorModel implements CalculatorModelInterface {
 			{return false;}
 		
 	}
-
+	
 	@Override
 	public void add() {
 		// TODO Auto-generated method stub
@@ -120,28 +95,30 @@ public class CalculatorModel implements CalculatorModelInterface {
 	@Override
 	public double pop() {
 		// TODO Auto-generated method stub
-		return 0;
+		if (pile.isEmpty()){return false}; //on verifie si la pile est vide, si oui on retourne un erreur
+		else return pile.pop();// sinon on utilise pop()
+	
 	}
-
 
 	@Override
 	public void drop() {
-		// TODO Auto-generated method stub
-		
+		pile.removeElementAt(pile[-1]); // on enlève le dernier élément de la pile
 	}
-
+	
 
 	@Override
 	public void swap() {
 		// TODO Auto-generated method stub
-		
+		a=pile[-1];
+		b=pile[-2];
+		pile[-1]=b;
+		pile[-2]=a;
 	}
-
 
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
-		
+		pile.clear();
 	}
 	
 
